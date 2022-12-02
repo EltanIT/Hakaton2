@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Hakaton</string>
+    <string name="title_news_text_textview">Ежегодный областной творческий конкурс</string>
+    <string name="request_text_button">Прием заявок</string>
+    <string name="discription">Описание</string>
+    <string name="input">Войти</string>
+    <string name="registration">Регистрация</string>
+    <string name="submit_request">Оставить заявку</string>
+    <string name="rating">Рейтинг</string>
+    <string name="delete_request">Удалить заявку</string>
+</resources>
