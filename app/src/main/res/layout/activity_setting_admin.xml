@@ -52,7 +52,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -60,6 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/setting_image"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/application_image"
@@ -69,23 +70,39 @@
                         android:layout_marginTop="5dp"
                         />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Заявки"
+                        android:layout_marginTop="47dp"
+                        android:layout_marginStart="68dp"
+                        />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content"
+                    >
                     <androidx.appcompat.widget.AppCompatImageButton
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginEnd="10dp"
-                        android:layout_marginStart="150dp"
+                        android:layout_marginStart="270dp"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/round_shape"
                         android:scaleType="fitXY"
                         android:src="@drawable/setting_image" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Настройки"
+                        android:layout_marginTop="47dp"
+                        android:layout_marginStart="255dp"
+                        android:fontFamily="@font/semibold"
+                        />
                 </RelativeLayout>
 
-            </LinearLayout>
+            </FrameLayout>
         </androidx.appcompat.widget.Toolbar>
     </androidx.cardview.widget.CardView>
 
