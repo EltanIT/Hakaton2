@@ -8,10 +8,10 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/request_button"
-        android:layout_width="146dp"
-        android:layout_height="25dp"
+        android:layout_width="126dp"
+        android:layout_height="23dp"
         android:text="@string/request_text_button"
-        android:textSize="11dp"
+        android:textSize="9dp"
         android:textColor="@color/colorbuttonPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,6 +19,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.03"
         app:layout_constraintHorizontal_bias="0.20"
+        android:background="@drawable/request_button_shape"
+
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/data_time"
+        android:layout_width="126dp"
+        android:layout_height="23dp"
+        android:text="@string/request_text_button"
+        android:textSize="9dp"
+        android:textColor="@color/colorbuttonPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.03"
+        app:layout_constraintHorizontal_bias="0.67"
         android:background="@drawable/request_button_shape"
 
         />
@@ -82,7 +98,7 @@
             app:cardElevation="3dp"
             >
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/signin_button"
+                android:id="@+id/see_request_button"
                 android:layout_width="175dp"
                 android:layout_height="40dp"
                 android:text="@string/request_see"
