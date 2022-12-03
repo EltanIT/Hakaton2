@@ -1,4 +1,4 @@
-package capybara.racesdispute.hakaton
+package capybara.racesdispute.hakaton.server
 
 import com.squareup.moshi.Moshi
 import okhttp3.OkHttpClient

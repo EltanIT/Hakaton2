@@ -1,4 +1,4 @@
-package capybara.racesdispute.hakaton
+package capybara.racesdispute.hakaton.server
 
 data class SignUpRequestBody(
     val username: String,
