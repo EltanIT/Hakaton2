@@ -50,11 +50,10 @@
         android:layout_height="wrap_content"
         android:text="@string/FIO"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintVertical_bias="0.06"
-        app:layout_constraintHorizontal_bias="0.17"
+        android:layout_marginStart="60dp"
         android:textSize="16sp"
         android:textColor="@color/black"
         android:fontFamily="@font/regular"
@@ -69,34 +68,18 @@
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.24"
+        android:layout_marginStart="60dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintTop_toBottomOf="@+id/fio_textview"
+        app:layout_constraintVertical_bias="0.02" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/textView2"
-        android:layout_width="126dp"
-        android:layout_height="23dp"
-        android:background="@drawable/request_button_shape"
-        android:text="@string/printed_edition"
-        android:textColor="@color/colorbuttonPrimary"
-        android:textSize="9sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintVertical_bias="0.20" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        android:layout_marginStart="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.1">
@@ -163,11 +146,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        android:layout_marginStart="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintVertical_bias="0.3"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -189,11 +171,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        android:layout_marginStart="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.7">
+        app:layout_constraintVertical_bias="0.56">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -210,43 +191,22 @@
             />
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/see_request_button"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        android:text="@string/see_points"
+        android:textColor="@color/white"
+        android:fontFamily="@font/medium"
+        android:background="@drawable/request_button_shape"
+        android:backgroundTint="@color/colorbuttonPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2"
-        app:layout_constraintVertical_bias="0.95">
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/see_request_button"
-            android:layout_width="175dp"
-            android:layout_height="40dp"
-            android:text="@string/see_points"
-            android:textColor="@color/white"
-            android:background="@drawable/request_button_shape"
-            android:backgroundTint="@color/colorbuttonPrimary"
-            android:onClick="see_request_button_clicked"
-            />
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/delete_request_button"
-            android:layout_width="175dp"
-            android:layout_height="40dp"
-            android:text="@string/see_points"
-            android:textColor="@color/agate_gray"
-            android:background="@drawable/request_button_shape"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView2"
-            app:layout_constraintVertical_bias="0.9"
-            android:layout_marginTop="10dp"
-            android:onClick="see_request_button_clicked"
-            />
-    </LinearLayout>
-
-
+        app:layout_constraintVertical_bias="0.76"
+        android:onClick="see_request_button_clicked"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

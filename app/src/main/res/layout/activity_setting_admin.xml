@@ -147,6 +147,17 @@
             />
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Укажите дату начала этапа"
+        android:fontFamily="@font/medium"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_up" />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/accept_request"
             android:layout_width="160dp"
@@ -156,7 +167,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/request_button_shape"
-            app:layout_constraintVertical_bias="0.03"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.1"
             android:text="Прием заявок"
             android:textSize="12sp"
             />
@@ -170,6 +182,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/request_button_shape"
             app:layout_constraintVertical_bias="0.03"
+            app:layout_constraintHorizontal_bias="0.1"
             android:text="Ожидается запуск"
             android:textSize="12sp"
 
@@ -184,6 +197,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/request_button_shape"
             app:layout_constraintVertical_bias="0.03"
+            app:layout_constraintHorizontal_bias="0.1"
             android:text="Независимая экспертиза"
             android:textSize="12sp"
             />
@@ -196,9 +210,108 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/request_button_shape"
             app:layout_constraintVertical_bias="0.03"
+            app:layout_constraintHorizontal_bias="0.1"
             android:text="Завершение конкурса"
             android:textSize="12sp"
             />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintVertical_bias="0.42"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="до 05.12.2022"
+                android:fontFamily="@font/medium"
+                />
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/calendare_image"
+                android:layout_marginStart="110dp"
+                android:layout_marginBottom="15dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="до 05.12.2022"
+                android:fontFamily="@font/medium"
+                />
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/calendare_image"
+                android:layout_marginStart="110dp"
+                android:layout_marginBottom="15dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="до 05.12.2022"
+                android:fontFamily="@font/medium"
+                />
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/calendare_image"
+                android:layout_marginStart="110dp"
+                android:layout_marginBottom="15dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="до 05.12.2022"
+                android:fontFamily="@font/medium"
+                />
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/calendare_image"
+                android:layout_marginStart="110dp"
+                android:layout_marginBottom="15dp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -221,10 +334,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Выход из аккаунта"
-            android:textColor="@color/exit_from_profil_colortext"
+            android:textColor="@color/colorbuttonSecondary"
             android:layout_marginStart="6dp"
             />
     </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save_request_button"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        android:text="Сохранить"
+        android:textColor="@color/white"
+        android:background="@drawable/request_button_shape"
+        android:backgroundTint="@color/colorbuttonPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_up"
+        app:layout_constraintVertical_bias="0.76"
+        android:onClick="save_request_button_clicked"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel_button"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        android:text="Отменить"
+        android:textColor="@color/agate_gray"
+        android:background="@drawable/request_button_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/save_request_button"
+        app:layout_constraintVertical_bias="0.2"
+        android:onClick="cancel_button_clicked"
+        />
 
 
 
