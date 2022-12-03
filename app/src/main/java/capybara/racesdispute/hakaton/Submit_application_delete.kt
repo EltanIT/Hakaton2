@@ -13,11 +13,11 @@ class Submit_application_delete : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_submit_application_delete)
-
         see_request_button = findViewById(R.id.see_request_button)
+
     }
 
-    fun signin_button_clicked(view: View) {
+    fun see_request_button_clicked(view: View) {
         val intent = Intent(this@Submit_application_delete,See_request_Activity::class.java)
         startActivity(intent)
     }

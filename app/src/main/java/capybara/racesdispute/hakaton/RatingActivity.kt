@@ -5,14 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class MainScreenActivity : AppCompatActivity() {
+class RatingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_screen)
+        setContentView(R.layout.activity_rating)
     }
 
-    fun Submit_request_clicked(view: View) {
-        val intent = Intent(this@MainScreenActivity,SubmitActivity::class.java)
-        startActivity(intent)
+    fun rating_button_clicked(view: View) {
     }
 }

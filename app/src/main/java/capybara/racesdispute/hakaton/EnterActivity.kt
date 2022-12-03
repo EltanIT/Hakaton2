@@ -1,5 +1,6 @@
 package capybara.racesdispute.hakaton
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -22,6 +23,8 @@ class EnterActivity : AppCompatActivity() {
 
     fun Login(view: View) {
         load()
+        val intent = Intent(this@EnterActivity,MainScreenActivity::class.java)
+        startActivity(intent)
     }
     fun load() {
         lifecycleScope.launch {
@@ -31,5 +34,10 @@ class EnterActivity : AppCompatActivity() {
             val token = ac.login(Username, Password)
             Log.d("token", token.toString())
         }
+    }
+
+    fun BackToRegistrate(view: View) {
+        val intent = Intent(this@EnterActivity,MainActivity::class.java)
+        startActivity(intent)
     }
 }
