@@ -210,42 +210,21 @@
             />
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/see_request_button"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        android:text="@string/see_points"
+        android:textColor="@color/white"
+        android:background="@drawable/request_button_shape"
+        android:backgroundTint="@color/colorbuttonPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/request_button"
-        app:layout_constraintVertical_bias="0.95">
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/see_request_button"
-            android:layout_width="175dp"
-            android:layout_height="40dp"
-            android:text="@string/see_points"
-            android:textColor="@color/white"
-            android:background="@drawable/request_button_shape"
-            android:backgroundTint="@color/colorbuttonPrimary"
-            android:onClick="see_request_button_clicked"
-            />
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/delete_request_button"
-            android:layout_width="175dp"
-            android:layout_height="40dp"
-            android:text="@string/see_points"
-            android:textColor="@color/agate_gray"
-            android:background="@drawable/request_button_shape"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/request_button"
-            app:layout_constraintVertical_bias="0.9"
-            android:layout_marginTop="10dp"
-            android:onClick="see_request_button_clicked"
-            />
-    </LinearLayout>
-
+        app:layout_constraintVertical_bias="0.9"
+        android:onClick="see_request_button_clicked"
+        />
 
 
 

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.Setting_admin">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/toolbar_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardElevation="15dp"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right|center"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/round_shape"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/profil_image" />
+            </FrameLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/toolbar_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:cardElevation="110dp"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/application_image"
+                        android:background="@color/white"
+                        android:scaleType="fitXY"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="5dp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="150dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/round_shape"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/setting_image" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/semibold"
+        android:text="Настройки"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_up"
+        app:layout_constraintVertical_bias="0.04"
+        app:layout_constraintHorizontal_bias="0.2"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/start_event"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="175dp"
+            android:layout_height="35dp"
+            android:background="@drawable/request_button_shape"
+            android:backgroundTint="@color/agate_gray"
+            android:gravity="center"
+            android:text="Начать конкурс"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/accept_request"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/start_event"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/request_button_shape"
+            app:layout_constraintVertical_bias="0.03"
+            android:text="Прием заявок"
+            android:textSize="12sp"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/launch_expected"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/accept_request"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/request_button_shape"
+            app:layout_constraintVertical_bias="0.03"
+            android:text="Ожидается запуск"
+            android:textSize="12sp"
+
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/expertise"
+            android:layout_width="230dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/launch_expected"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/request_button_shape"
+            app:layout_constraintVertical_bias="0.03"
+            android:text="Независимая экспертиза"
+            android:textSize="12sp"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/expertise"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/request_button_shape"
+            app:layout_constraintVertical_bias="0.03"
+            android:text="Завершение конкурса"
+            android:textSize="12sp"
+            />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.14">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/exit_profil"
+            android:scaleType="fitXY"
+            android:background="@color/white"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выход из аккаунта"
+            android:textColor="@color/exit_from_profil_colortext"
+            android:layout_marginStart="6dp"
+            />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
