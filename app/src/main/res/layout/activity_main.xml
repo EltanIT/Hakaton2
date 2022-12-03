@@ -65,6 +65,37 @@
         app:layout_constraintHorizontal_bias="0.17"
         />
 
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.73"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="25dp"
+            android:text="Прочитать больше"
+            android:textColor="@color/colorbuttonSecondary"
+            android:fontFamily="@font/regular"
+            android:onClick="read_more"
+            />
+        <TextView
+            android:id="@+id/textviewanim"
+            android:layout_width="430dp"
+            android:layout_height="70dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+
+    </LinearLayout>
+
 
 
     <LinearLayout
@@ -117,6 +148,7 @@
             app:layout_constraintTop_toBottomOf="@id/signin_button"
             android:onClick="Registrate"
             />
+
     </LinearLayout>
 
 
