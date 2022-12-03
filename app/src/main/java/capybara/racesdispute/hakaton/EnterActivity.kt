@@ -31,6 +31,7 @@ class EnterActivity : AppCompatActivity() {
         lifecycleScope.launch {
             val Username = email.text.toString()
             val Password = password.text.toString()
+
             try {
                 val ac = AccountsRepository()
                 val token = ac.login(Username, Password)
@@ -38,6 +39,7 @@ class EnterActivity : AppCompatActivity() {
             }catch (e: java.lang.Exception){
                 Log.d("msgppp","ne robit")
             }
+
 
         }
     }

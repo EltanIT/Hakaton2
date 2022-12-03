@@ -32,59 +32,15 @@
         android:textSize="38sp"
         android:fontFamily="@font/semibold"
         />
+
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/Name"
+        android:id="@+id/email"
         android:layout_width="350dp"
         android:layout_height="35dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/HelloUserText"
-        android:paddingLeft="15dp"
-        android:background="@drawable/edittxt"
-        android:fontFamily="@font/regular"
-        android:hint="Фамилия"
-        android:textSize="16sp"
-
-        />
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/Surname"
-        android:layout_width="350dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Name"
-        android:paddingLeft="15dp"
-        android:background="@drawable/edittxt"
-        android:fontFamily="@font/regular"
-        android:hint="Имя"
-        android:textSize="16sp"
-
-        />
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/Email"
-        android:layout_width="350dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Surname"
-        android:paddingLeft="15dp"
-        android:background="@drawable/edittxt"
-        android:fontFamily="@font/regular"
-        android:hint="Отчество"
-        android:textSize="16sp"
-
-        />
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/NumberPhone"
-        android:layout_width="350dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Email"
         android:paddingLeft="15dp"
         android:background="@drawable/edittxt"
         android:fontFamily="@font/regular"
@@ -99,7 +55,7 @@
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/NumberPhone"
+        app:layout_constraintTop_toBottomOf="@id/email"
         android:paddingLeft="15dp"
         android:background="@drawable/edittxt"
         android:fontFamily="@font/regular"
@@ -109,7 +65,7 @@
 
         />
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/Pas"
+        android:id="@+id/RePassword"
         android:layout_width="350dp"
         android:layout_height="35dp"
         android:layout_marginTop="25dp"
@@ -133,7 +89,7 @@
         android:paddingStart="36dp"
         android:text="*-данные обязательны для заполения"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Pas"
+        app:layout_constraintTop_toBottomOf="@id/RePassword"
 
         />
     <androidx.appcompat.widget.AppCompatButton
@@ -151,6 +107,8 @@
         android:background="@drawable/button_reception_dark"
         android:stateListAnimator="@null"
         android:onClick="Continue"
-
         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
