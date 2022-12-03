@@ -30,7 +30,9 @@
                     android:layout_gravity="center|left"
                     android:background="@color/white"
                     android:scaleType="fitXY"
-                    android:src="@drawable/exit_button" />
+                    android:src="@drawable/exit_button"
+                    android:onClick="BackToSubmitApplicationDelete_Button"
+                    />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:layout_width="50dp"

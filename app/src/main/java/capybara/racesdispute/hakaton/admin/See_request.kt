@@ -21,6 +21,8 @@ class See_request : AppCompatActivity() {
         val intent = Intent(this@See_request,Application_admin::class.java)
         startActivity(intent)
     }
+
+    fun see_request_button_clicked(view: View) {}
 }
 
 

@@ -166,8 +166,8 @@
         />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Continue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
         android:layout_marginTop="20dp"
         android:text="Отправить"
         android:textAllCaps="false"
@@ -176,7 +176,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dsa1"
-        android:background="@drawable/button_reception_dark"
+        android:background="@drawable/request_button_shape"
+        android:backgroundTint="@color/agate_gray"
         android:stateListAnimator="@null"
         android:onClick="Continue"
 

@@ -6,13 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/textView2"
-        android:layout_width="126dp"
-        android:layout_height="23dp"
+        android:layout_width="146dp"
+        android:layout_height="25dp"
         android:text="@string/request_text_button"
-        android:textSize="9sp"
+        android:textSize="11dp"
         android:textColor="@color/colorbuttonPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,38 +22,20 @@
         android:background="@drawable/request_button_shape"
 
         />
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/data_time"
-        android:layout_width="126dp"
-        android:layout_height="23dp"
-        android:text="@string/request_text_button"
-        android:textSize="9sp"
-        android:textColor="@color/colorbuttonPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.03"
-        app:layout_constraintHorizontal_bias="0.67"
-        android:background="@drawable/request_button_shape"
-
-        />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="330dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="@string/title_news_text_textview"
         android:textColor="@color/colortext"
-        android:textSize="30sp"
-        android:fontFamily="@font/semibold"
+        android:textSize="27sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2"
-        app:layout_constraintVertical_bias="0.06"
-        app:layout_constraintHorizontal_bias="0.67"
-        />
+        app:layout_constraintVertical_bias="0.06" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/title_image"
@@ -75,14 +56,16 @@
         android:text="@string/discription"
         android:textSize="21sp"
         android:textColor="@color/colortext"
-        android:fontFamily="@font/regular"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.50"
+        app:layout_constraintVertical_bias="0.58"
         app:layout_constraintHorizontal_bias="0.17"
         />
+
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -92,20 +75,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.90"
+        app:layout_constraintVertical_bias="0.9"
         >
 
         <androidx.cardview.widget.CardView
-            android:layout_width="175dp"
+            android:layout_width="185dp"
             android:layout_height="40dp"
             app:cardCornerRadius="22dp"
             app:cardElevation="3dp"
             >
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/see_request_button"
-                android:layout_width="175dp"
+                android:id="@+id/rating_button"
+                android:layout_width="185dp"
                 android:layout_height="40dp"
-                android:text="@string/request_see"
+                android:text="Посмотреть рейтинг"
                 android:textColor="@color/white"
                 android:background="@drawable/request_button_shape"
                 android:backgroundTint="@color/colorbuttonPrimary"
@@ -114,11 +97,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textView2"
                 app:layout_constraintVertical_bias="0.9"
-                android:onClick="see_request_button_clicked"
+                android:onClick="rating_button_clicked"
                 />
 
         </androidx.cardview.widget.CardView>
-
 
     </LinearLayout>
 
