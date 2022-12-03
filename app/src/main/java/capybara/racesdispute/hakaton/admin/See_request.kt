@@ -3,11 +3,8 @@ package capybara.racesdispute.hakaton.admin
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import capybara.racesdispute.hakaton.MainScreenActivity
 import capybara.racesdispute.hakaton.R
-import capybara.racesdispute.hakaton.Text_animation
 
 class See_request : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
