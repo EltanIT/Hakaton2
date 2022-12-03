@@ -8,4 +8,16 @@
     <string name="submit_request">Оставить заявку</string>
     <string name="request_see">Посмотреть заявку</string>
     <string name="delete_request">Удалить заявку</string>
+    <string name="FIO">Фамилия Имя Отчество</string>
+    <string name="work_name">Название работы</string>
+    <string name="printed_edition">печатное издание</string>
+    <string name="about_author">Об авторе</string>
+    <string name="text_about_author">продавец - кассир</string>
+    <string name="job_title">Должность:</string>
+    <string name="place_of_work">Местро работы:</string>
+    <string name="piaterochka">АО \'пятерочка\'</string>
+    <string name="anotacia">Аннотация</string>
+    <string name="File">Файл</string>
+    <string name="download_file">Скачать документ</string>
+    <string name="see_points">Посмотреть баллы</string>
 </resources>

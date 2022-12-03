@@ -1,4 +1,4 @@
-package capybara.racesdispute.hakaton
+package capybara.racesdispute.hakaton.server
 
 import retrofit2.http.Body
 import retrofit2.http.POST
