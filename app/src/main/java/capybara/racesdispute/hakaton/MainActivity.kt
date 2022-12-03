@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+
     fun Registrate(view: View) {
         val intent = Intent(this@MainActivity,Registrate_activity::class.java)
         startActivity(intent)
