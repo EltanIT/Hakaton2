@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".SubmitActivity">
     <ImageButton
         android:layout_width="15dp"
         android:layout_height="20dp"
@@ -13,8 +15,7 @@
         android:src="@drawable/exit_button"
         android:padding="1dp"
         android:scaleType="fitXY"
-        android:onClick="BackToRegistrate"
-         />
+        android:onClick="BackToRegistrate"/>
     <TextView
         android:id="@+id/HelloUserText"
         android:layout_width="wrap_content"
@@ -22,8 +23,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:paddingLeft="25dp"
-        android:paddingTop="130dp"
-        android:text="Регистрация"
+        android:paddingTop="90dp"
+        android:text="Оставить заявку"
         android:textColor="@color/colortext"
         android:textAllCaps="false"
         android:textSize="38sp"
@@ -32,7 +33,7 @@
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/Name"
         android:layout_width="350dp"
-        android:layout_height="35dp"
+        android:layout_height="28dp"
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +48,7 @@
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/Surname"
         android:layout_width="350dp"
-        android:layout_height="35dp"
+        android:layout_height="28dp"
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +63,7 @@
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/Email"
         android:layout_width="350dp"
-        android:layout_height="35dp"
+        android:layout_height="28dp"
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +78,7 @@
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/NumberPhone"
         android:layout_width="350dp"
-        android:layout_height="35dp"
+        android:layout_height="28dp"
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,14 +86,14 @@
         android:paddingLeft="15dp"
         android:background="@drawable/edittxt"
         android:fontFamily="@font/regular"
-        android:hint="E-mail"
+        android:hint="Должность*"
         android:textSize="16sp"
 
         />
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/Password"
         android:layout_width="350dp"
-        android:layout_height="35dp"
+        android:layout_height="28dp"
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,7 +101,7 @@
         android:paddingLeft="15dp"
         android:background="@drawable/edittxt"
         android:fontFamily="@font/regular"
-        android:hint="Пароль"
+        android:hint="Место работы*"
         android:textSize="16sp"
         android:inputType="textPassword"
 
@@ -108,7 +109,7 @@
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/Pas"
         android:layout_width="350dp"
-        android:layout_height="35dp"
+        android:layout_height="28dp"
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,12 +117,42 @@
         android:paddingLeft="15dp"
         android:background="@drawable/edittxt"
         android:fontFamily="@font/regular"
-        android:hint="Подтвердите пароль"
+        android:hint="Тема конкурсной работы*"
         android:textSize="16sp"
         android:inputType="textPassword"
-    />
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/dsasd"
+        android:layout_width="350dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Pas"
+        android:paddingLeft="15dp"
+        android:background="@drawable/edittxt"
+        android:fontFamily="@font/regular"
+        android:hint="Заголовок конкурсной работы*"
+        android:textSize="16sp"
+        android:inputType="textPassword"
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/dsa"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dsasd"
+        android:paddingLeft="15dp"
+        android:background="@drawable/edittxt"
+        android:fontFamily="@font/regular"
+        android:hint="Прикрепите свою конкурсную работу в форматах .docs,.pdf,.avi,.mp4"
+        android:textSize="14sp"
+        android:inputType="textPassword"
+        />
     <TextView
-        android:id="@+id/necessarily"
+        android:id="@+id/dsa1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -130,21 +161,21 @@
         android:paddingStart="36dp"
         android:text="*-данные обязательны для заполения"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Pas"
+        app:layout_constraintTop_toBottomOf="@id/dsa"
 
         />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Continue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Зарегистрироваться"
+        android:layout_marginTop="20dp"
+        android:text="Отправить"
         android:textAllCaps="false"
         android:textSize="16sp"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/necessarily"
+        app:layout_constraintTop_toBottomOf="@id/dsa1"
         android:background="@drawable/button_reception_dark"
         android:stateListAnimator="@null"
         android:onClick="Continue"

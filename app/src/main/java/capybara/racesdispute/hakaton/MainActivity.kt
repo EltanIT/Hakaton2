@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun signin_button_clicked(view: View) {
-        val intent = Intent(this@MainActivity,MainScreenActivity::class.java)
+        val intent = Intent(this@MainActivity,EnterActivity::class.java)
         startActivity(intent)
     }
 
