@@ -38,7 +38,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/toolbar_down"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -202,6 +202,7 @@
             android:textSize="12sp"
             />
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/StopConcurse"
             android:layout_width="170dp"
             android:layout_height="30dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -317,8 +318,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_up"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cancel_button"
+        android:paddingTop="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.55"
         app:layout_constraintHorizontal_bias="0.14">
@@ -338,32 +339,33 @@
             android:layout_marginStart="6dp"
             />
     </LinearLayout>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/save_request_button"
-        android:layout_width="175dp"
+        android:layout_width="150dp"
         android:layout_height="40dp"
+        android:layout_marginTop="40dp"
         android:text="Сохранить"
         android:textColor="@color/white"
         android:background="@drawable/request_button_shape"
         android:backgroundTint="@color/colorbuttonPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_up"
+        app:layout_constraintTop_toBottomOf="@id/StopConcurse"
         app:layout_constraintVertical_bias="0.76"
         android:onClick="save_request_button_clicked"
         />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cancel_button"
-        android:layout_width="175dp"
+        android:layout_width="150dp"
         android:layout_height="40dp"
+        android:layout_marginTop="15dp"
         android:text="Отменить"
         android:textColor="@color/agate_gray"
         android:background="@drawable/request_button_shape"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_request_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/save_request_button"
         app:layout_constraintVertical_bias="0.2"
         android:onClick="cancel_button_clicked"
         />
