@@ -6,6 +6,6 @@
     <string name="input">Войти</string>
     <string name="registration">Регистрация</string>
     <string name="submit_request">Оставить заявку</string>
-    <string name="rating">Рейтинг</string>
+    <string name="request_see">Посмотреть заявку</string>
     <string name="delete_request">Удалить заявку</string>
 </resources>
