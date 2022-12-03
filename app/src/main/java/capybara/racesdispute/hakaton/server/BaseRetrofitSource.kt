@@ -1,8 +1,9 @@
 package capybara.racesdispute.hakaton.server
 
+import capybara.racesdispute.hakaton.server.data_classes.users.SignInRequestBody
+import capybara.racesdispute.hakaton.server.data_classes.users.SignUpRequestBody
 import com.squareup.moshi.Moshi
 import okhttp3.OkHttpClient
-import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
