@@ -8,4 +8,5 @@
     <string name="submit_request">Оставить заявку</string>
     <string name="request_see">Посмотреть заявку</string>
     <string name="delete_request">Удалить заявку</string>
+    <string name="FIO">Фамилия Имя Отчество</string>
 </resources>
