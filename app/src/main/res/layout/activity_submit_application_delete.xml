@@ -8,7 +8,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/request_button"
+        android:id="@+id/textView2"
         android:layout_width="126dp"
         android:layout_height="23dp"
         android:text="@string/request_text_button"
@@ -51,7 +51,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/request_button"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
         app:layout_constraintVertical_bias="0.06"
         app:layout_constraintHorizontal_bias="0.67"
         />
@@ -63,7 +63,7 @@
         android:src="@drawable/request_title_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/request_button"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.29"
         android:background="@color/gray"
@@ -78,7 +78,7 @@
         android:fontFamily="@font/regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/request_button"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.50"
         app:layout_constraintHorizontal_bias="0.17"
@@ -112,7 +112,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/request_button"
+                app:layout_constraintTop_toBottomOf="@id/textView2"
                 app:layout_constraintVertical_bias="0.9"
                 android:onClick="signin_button_clicked"
                 />
