@@ -42,22 +42,25 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="300dp"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:text="@string/title_news_text_textview"
         android:textColor="@color/colortext"
-        android:textSize="27sp"
-        android:textStyle="bold"
+        android:textSize="30sp"
+        android:fontFamily="@font/semibold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/request_button"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintVertical_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.67"
+        />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/title_image"
         android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
+        android:src="@drawable/request_title_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/request_button"
@@ -72,12 +75,12 @@
         android:text="@string/discription"
         android:textSize="21sp"
         android:textColor="@color/colortext"
-        android:textStyle="bold"
+        android:fontFamily="@font/regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/request_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.58"
+        app:layout_constraintVertical_bias="0.50"
         app:layout_constraintHorizontal_bias="0.17"
         />
 
@@ -89,7 +92,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.99"
+        app:layout_constraintVertical_bias="0.90"
         >
 
         <androidx.cardview.widget.CardView
@@ -117,18 +120,6 @@
         </androidx.cardview.widget.CardView>
 
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/signup_button"
-            android:layout_width="175dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/delete_request"
-            android:textColor="@color/colorbuttonPrimary"
-            android:background="@drawable/request_button_shape"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/signin_button" />
     </LinearLayout>
 
 
