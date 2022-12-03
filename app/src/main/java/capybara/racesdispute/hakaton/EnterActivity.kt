@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.lifecycle.lifecycleScope
+import capybara.racesdispute.hakaton.admin.Application_admin
 import capybara.racesdispute.hakaton.server.AccountsRepository
 import kotlinx.coroutines.launch
 
@@ -30,10 +31,16 @@ class EnterActivity : AppCompatActivity() {
         lifecycleScope.launch {
             val Username = email.text.toString()
             val Password = password.text.toString()
-            val ac = AccountsRepository()
-            val token = ac.login(
-                Username, Password)
-            Log.d("token", token.toString())
+
+            try {
+                val ac = AccountsRepository()
+                val token = ac.login(Username, Password)
+                Log.d("token", token.toString())
+            }catch (e: java.lang.Exception){
+                Log.d("msgppp","ne robit")
+            }
+
+
         }
     }
 

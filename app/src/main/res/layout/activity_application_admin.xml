@@ -51,22 +51,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.2"
         >
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="gjkfsljskldjsa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FIO"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Название работы"
+            android:textSize="30sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
             />
     </RelativeLayout>
 
     <ListView
+        android:id="@+id/listView_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.04"
+        app:layout_constraintVertical_bias="0.44"
         >
 
     </ListView>

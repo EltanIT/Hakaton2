@@ -21,4 +21,6 @@ class See_request_Activity : AppCompatActivity() {
         val intent = Intent(this@See_request_Activity,SubmitActivity::class.java)
         startActivity(intent)
     }
+
+    fun read_more(view: View) {}
 }
