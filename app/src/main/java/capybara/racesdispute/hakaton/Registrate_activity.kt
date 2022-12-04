@@ -25,7 +25,6 @@ class Registrate_activity : AppCompatActivity() {
         email1 = findViewById(R.id.email)
         password1 = findViewById(R.id.Password)
         rePassword = findViewById(R.id.RePassword)
-        ProblemTxt = findViewById(R.id.necessarily)
     }
 
     fun Continue(view: View) {

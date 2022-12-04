@@ -7,6 +7,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import capybara.racesdispute.hakaton.experts.ExpertsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun Registrate(view: View) {
-        val intent = Intent(this@MainActivity,Registrate_activity::class.java)
+        val intent = Intent(this@MainActivity,ExpertsActivity::class.java)
         startActivity(intent)
     }
 

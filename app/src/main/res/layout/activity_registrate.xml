@@ -80,23 +80,35 @@
         android:inputType="textPassword"
         />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/Continue"
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/save_request_button"
         android:layout_width="190dp"
         android:layout_height="40dp"
-        android:layout_marginTop="60dp"
-        android:text="Зарегистрироваться"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        android:textColor="@color/white"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="3dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/RePassword"
-        android:background="@drawable/button_reception_dark"
-        android:stateListAnimator="@null"
-        android:onClick="Continue"
-        />
+        android:layout_marginTop="60dp"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Continue"
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:text="Зарегистрироваться"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_reception_dark"
+            android:stateListAnimator="@null"
+            android:onClick="Continue"
+            />
+
+    </androidx.cardview.widget.CardView>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

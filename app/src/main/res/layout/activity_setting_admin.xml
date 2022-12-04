@@ -127,7 +127,7 @@
         android:layout_width="175dp"
         android:layout_height="35dp"
         app:cardCornerRadius="22dp"
-        app:cardElevation="5dp"
+        app:cardElevation="3dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar_up"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -340,21 +340,30 @@
             />
     </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/save_request_button"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_marginTop="40dp"
-        android:text="Сохранить"
-        android:textColor="@color/white"
-        android:background="@drawable/request_button_shape"
-        android:backgroundTint="@color/colorbuttonPrimary"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/StopConcurse"
         app:layout_constraintVertical_bias="0.76"
-        android:onClick="save_request_button_clicked"
-        />
+        android:layout_marginTop="40dp"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="Сохранить"
+            android:textColor="@color/white"
+            android:background="@drawable/request_button_shape"
+            android:backgroundTint="@color/colorbuttonPrimary"
+            android:onClick="save_request_button_clicked"
+            />
+
+    </androidx.cardview.widget.CardView>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cancel_button"
         android:layout_width="150dp"

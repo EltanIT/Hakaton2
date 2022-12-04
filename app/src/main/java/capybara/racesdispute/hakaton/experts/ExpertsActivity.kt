@@ -16,7 +16,7 @@ class ExpertsActivity : AppCompatActivity() {
     }
 
     fun BackToRegistrate(view: View) {
-        val intent = Intent(this@ExpertsActivity,Submit_application_delete::class.java)
+        val intent = Intent(this@ExpertsActivity,EnterActivity::class.java)
         startActivity(intent)
     }
     fun Continue(view: View) {

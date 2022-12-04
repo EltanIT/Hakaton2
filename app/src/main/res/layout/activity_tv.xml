@@ -7,7 +7,7 @@
     tools:context=".TV">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/toolbar_up"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,6 +25,16 @@
                 android:layout_height="match_parent">
 
                 <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="14dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center|left"
+                    android:background="@color/white"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/exit_button"
+                    android:onClick="BackToSubmitApplicationDelete_Button"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageButton
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="right|center"
@@ -37,26 +47,11 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/LowCrtiteries"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_up"
-        android:paddingTop="10dp"
-        android:text="Понижающие критерии"
-        android:textColor="@color/colortext"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:fontFamily="@font/semibold"
-        />
-
-    <TextView
         android:id="@+id/OneTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LowCrtiteries"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         android:paddingTop="10dp"
         android:text="Актуальность и значимость темы"
@@ -435,35 +430,5 @@
             android:layout_height="wrap_content"
             />
     </RadioGroup>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/save_request_button"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="2dp"
-        android:text="Сохранить"
-        android:textColor="@color/white"
-        android:background="@drawable/request_button_shape"
-        android:backgroundTint="@color/colorbuttonPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SixRadioGroup"
-        app:layout_constraintVertical_bias="0.76"
-        android:onClick="save_request_button_clicked"
-        />
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/cancel_button"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:text="Отменить"
-        android:textColor="@color/agate_gray"
-        android:background="@drawable/request_button_shape"
-        app:layout_constraintTop_toBottomOf="@+id/save_request_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.2"
-        android:onClick="cancel_button_clicked"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
