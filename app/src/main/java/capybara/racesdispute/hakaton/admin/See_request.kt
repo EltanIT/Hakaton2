@@ -28,12 +28,12 @@ class See_request : AppCompatActivity() {
     }
 
     fun BacktoApplicationListAdmin(view: View) {
-        val intent = Intent(this@See_request,Application_admin::class.java)
+        val intent = Intent(this@See_request,ApplicationAdminActivity::class.java)
         startActivity(intent)
     }
 
     fun see_request_button_clicked(view: View) {
-        val intent = Intent(this@See_request,Application_admin::class.java)
+        val intent = Intent(this@See_request,ApplicationAdminActivity::class.java)
         startActivity(intent)
     }
 

@@ -4,11 +4,11 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.lifecycle.lifecycleScope
+import capybara.racesdispute.hakaton.experts.ExpertsActivityTrue
 import capybara.racesdispute.hakaton.server.AccountsRepository
 import kotlinx.coroutines.launch
 
@@ -49,7 +49,7 @@ class Registrate_activity : AppCompatActivity() {
         }
     }
     fun BackToRegistrate(view: View) {
-        val intent = Intent(this@Registrate_activity,MainActivity::class.java)
+        val intent = Intent(this@Registrate_activity, ExpertsActivityTrue::class.java)
         startActivity(intent)
     }
 }

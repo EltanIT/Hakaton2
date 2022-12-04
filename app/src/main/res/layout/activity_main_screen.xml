@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".experts.ExpertsActivityTrue">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/toolbar"
@@ -127,9 +127,8 @@
         android:layout_marginStart="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintVertical_bias="0.6"
         >
-
 
         <TextView
             android:id="@+id/textviewanim"
@@ -137,15 +136,6 @@
             android:layout_height="70dp"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginTop="25dp"
-            android:text="Прочитать больше"
-            android:textColor="@color/colorbuttonSecondary"
-            android:fontFamily="@font/regular"
-            android:onClick="read_more"
             />
 
     </LinearLayout>

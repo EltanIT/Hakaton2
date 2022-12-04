@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import capybara.racesdispute.hakaton.MainActivity
 import capybara.racesdispute.hakaton.R
 
 class Lower2Activity : AppCompatActivity() {
@@ -13,7 +14,7 @@ class Lower2Activity : AppCompatActivity() {
     }
 
     fun save_request_button_clicked(view: View) {
-        val intent = Intent(this@Lower2Activity,ExpertsActivityTrue::class.java)
+        val intent = Intent(this@Lower2Activity, ExpertsActivityTrue::class.java)
         startActivity(intent)
     }
 
