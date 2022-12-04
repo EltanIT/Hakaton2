@@ -2,6 +2,8 @@ package capybara.racesdispute.hakaton.server
 
 import android.provider.ContactsContract.CommonDataKinds.Email
 import kotlinx.coroutines.delay
+import retrofit2.http.Header
+import java.io.FileInputStream
 
 class AccountsRepository: BaseRetrofitSource() {
     suspend fun login(
@@ -24,7 +26,7 @@ class AccountsRepository: BaseRetrofitSource() {
         val baseRetrofitSource  = BaseRetrofitSource()
         baseRetrofitSource.GetUser(username)
     }
-    suspend fun createQuery(
+    suspend fun request(
         full_name: String,
         post: String,
         job_place: String,
@@ -32,10 +34,18 @@ class AccountsRepository: BaseRetrofitSource() {
         title_work: String,
         anotation: String,
         file: String,
-        token: String
-        ) {
+        Authorization: String
+
+    ){
         val baseRetrofitSource  = BaseRetrofitSource()
-        baseRetrofitSource.CreateQuery(full_name, post, job_place, topic_work, title_work, anotation, file,token)
+        baseRetrofitSource.CreateQuery(full_name, post, job_place, topic_work, title_work, anotation, file, Authorization)
     }
 
+
+    suspend fun file(
+        file: FileInputStream,
+    ){
+        val baseRetrofitSource = BaseRetrofitSource()
+        baseRetrofitSource.UploadFile(file)
+    }
 }
