@@ -16,7 +16,7 @@ class ExpertsActivityTrue : AppCompatActivity() {
     }
 
     fun BackToSubmitApplicationDelete_Button(view: View) {
-        val intent = Intent(this@ExpertsActivityTrue, Submit_application_delete::class.java)
+        val intent = Intent(this@ExpertsActivityTrue, ExpertsActivity::class.java)
         startActivity(intent)
     }
 

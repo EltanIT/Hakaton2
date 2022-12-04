@@ -6,43 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.AppCompatButton
+    <LinearLayout
         android:id="@+id/textView2"
-        android:layout_width="146dp"
-        android:layout_height="25dp"
-        android:text="@string/request_text_button"
-        android:textSize="11dp"
-        android:textColor="@color/colorbuttonPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.03"
         app:layout_constraintHorizontal_bias="0.20"
-        android:background="@drawable/request_button_shape"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/textView1"
+            android:layout_width="156dp"
+            android:layout_height="25dp"
+            android:text="Завершение конкурса"
+            android:textSize="11dp"
+            android:textColor="@color/colorbuttonPrimary"
+            android:background="@drawable/request_button_shape"
 
-        />
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/textView3"
+            android:layout_width="136dp"
+            android:layout_height="25dp"
+            android:text="05.12.2022"
+            android:textSize="11dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorbuttonPrimary"
+            android:background="@drawable/request_button_shape"
+
+            />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="300dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:text="@string/title_news_text_textview"
         android:textColor="@color/colortext"
         android:textSize="27sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2"
         app:layout_constraintVertical_bias="0.06" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/title_image"
-        android:layout_width="300dp"
+        android:layout_width="320dp"
         android:layout_height="150dp"
         android:src="@drawable/request_title_image"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,38 +68,61 @@
         />
 
     <TextView
+        android:id="@+id/opis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/discription"
         android:textSize="21sp"
         android:textColor="@color/colortext"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.58"
+        app:layout_constraintVertical_bias="0.5"
         app:layout_constraintHorizontal_bias="0.17"
         />
-
-
-
     <LinearLayout
+        android:id="@+id/linearlayout"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintTop_toBottomOf="@+id/opis"
+        android:layout_marginTop="5dp"
         >
+
+        <TextView
+            android:id="@+id/textviewanim"
+            android:layout_width="320dp"
+            android:layout_height="70dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Прочитать больше"
+            android:textColor="@color/colorbuttonSecondary"
+            android:fontFamily="@font/regular"
+            android:onClick="read_more"
+            />
+
+    </LinearLayout>
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="185dp"
             android:layout_height="40dp"
             app:cardCornerRadius="22dp"
             app:cardElevation="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9"
             >
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/rating_button"
@@ -101,8 +141,6 @@
                 />
 
         </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
 
 
 

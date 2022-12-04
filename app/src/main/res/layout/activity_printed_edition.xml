@@ -434,21 +434,31 @@
             />
     </RadioGroup>
 
-    <androidx.appcompat.widget.AppCompatButton
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/save_request_button"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_marginTop="30dp"
-        android:text="Сохранить"
-        android:textColor="@color/white"
-        android:background="@drawable/request_button_shape"
-        android:backgroundTint="@color/colorbuttonPrimary"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/SixRadioGroup"
         app:layout_constraintVertical_bias="0.76"
-        android:onClick="save_request_button_clicked"
-        />
+        android:layout_marginTop="30dp"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="Сохранить"
+            android:textColor="@color/white"
+            android:background="@drawable/request_button_shape"
+            android:backgroundTint="@color/colorbuttonPrimary"
+
+            android:onClick="save_request_button_clicked"
+            />
+
+    </androidx.cardview.widget.CardView>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cancel_button"
         android:layout_width="150dp"
