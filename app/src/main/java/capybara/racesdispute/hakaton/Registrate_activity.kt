@@ -18,7 +18,7 @@ lateinit var rePassword : AppCompatEditText
 lateinit var  ProblemTxt : TextView
 
 class Registrate_activity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrate)

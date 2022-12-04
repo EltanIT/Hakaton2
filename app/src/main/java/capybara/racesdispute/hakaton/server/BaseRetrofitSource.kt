@@ -1,5 +1,7 @@
 package capybara.racesdispute.hakaton.server
 
+import capybara.racesdispute.hakaton.server.data_classes.queries.CreateQueryRequestBody
+import capybara.racesdispute.hakaton.server.data_classes.queries.CreateQueryRequestHead
 import capybara.racesdispute.hakaton.server.data_classes.users.SignInRequestBody
 import capybara.racesdispute.hakaton.server.data_classes.users.SignUpRequestBody
 import com.squareup.moshi.Moshi
@@ -65,5 +67,40 @@ open class BaseRetrofitSource {
 
         val response = api.signUp(requestBody)
     }
+    suspend fun CreateQuery(email:String,full_name: String, post: String, job_place: String, topic_work: String, title_work: String, annotation: String, file: String){
+        val loggingInterceptor = HttpLoggingInterceptor()
+            .setLevel(HttpLoggingInterceptor.Level.BODY)
 
+        val client = OkHttpClient.Builder()
+            .addInterceptor(loggingInterceptor)
+            .build()
+
+        val moshi = Moshi.Builder().build()
+
+        val  moshiConverterFactory = MoshiConverterFactory.create(moshi)
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl("http://176.28.64.201:3437/")
+            .client(client)
+            .addConverterFactory(moshiConverterFactory)
+            .build()
+
+        val api = retrofit.create(Api::class.java)
+
+        val requestHead = CreateQueryRequestHead(
+            email = email
+        )
+        val requestBody = CreateQueryRequestBody(
+            full_name = full_name,
+            post = post,
+            job_place = job_place,
+            topic_work = topic_work,
+            title_work = title_work,
+            annotation = annotation,
+            file = file
+        )
+
+        val response = api.create_query(requestBody, requestHead)
+
+    }
 }
