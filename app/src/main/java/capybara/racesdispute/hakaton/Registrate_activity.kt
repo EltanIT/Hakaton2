@@ -31,7 +31,8 @@ class Registrate_activity : AppCompatActivity() {
 
     fun Continue(view: View) {
         load()
-
+        val intent = Intent(this@Registrate_activity,EnterActivity::class.java)
+        startActivity(intent)
     }
     fun load() {
         lifecycleScope.launch {
@@ -42,8 +43,6 @@ class Registrate_activity : AppCompatActivity() {
 
             val response = ac.registrate(Username,Password)
 
-            val intent = Intent(this@Registrate_activity,EnterActivity::class.java)
-            startActivity(intent)
 
 
         }

@@ -4,10 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import capybara.racesdispute.hakaton.EnterActivity
-import capybara.racesdispute.hakaton.LowerActivity
 import capybara.racesdispute.hakaton.R
-import capybara.racesdispute.hakaton.Submit_application_delete
 
 class ExpertsActivityTrue : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

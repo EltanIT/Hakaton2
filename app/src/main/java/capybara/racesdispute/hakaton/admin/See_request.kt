@@ -32,11 +32,16 @@ class See_request : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun see_request_button_clicked(view: View) {}
+    fun see_request_button_clicked(view: View) {
+        val intent = Intent(this@See_request,Application_admin::class.java)
+        startActivity(intent)
+    }
 
     fun read_more(view: View) {
         textviewanim.startAnimation(anim)
     }
+
+    fun go_to_request_button(view: View) {}
 }
 
 

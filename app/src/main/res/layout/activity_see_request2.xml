@@ -82,6 +82,7 @@
                         android:scaleType="fitXY"
                         android:layout_marginTop="5dp"
                         android:layout_marginStart="7dp"
+                        android:onClick="go_to_request_button"
                         />
 
                     <TextView
@@ -109,7 +110,9 @@
                         android:layout_marginEnd="10dp"
                         android:background="@drawable/round_shape"
                         android:scaleType="fitXY"
-                        android:src="@drawable/setting_image" />
+                        android:src="@drawable/setting_nonactive_image"
+                        android:onClick="go_to_setting_admin"
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -117,7 +120,7 @@
                         android:text="Настройки"
                         android:layout_marginTop="47dp"
                         android:layout_marginStart="255dp"
-                        android:fontFamily="@font/semibold"
+                        android:fontFamily="@font/regular"
                         />
                 </RelativeLayout>
 
