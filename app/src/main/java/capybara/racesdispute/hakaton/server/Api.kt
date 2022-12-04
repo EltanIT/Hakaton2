@@ -20,7 +20,7 @@ interface Api {
 
 
     @POST("/create_query")
-    suspend fun create_query(@Body body: CreateQueryRequestBody,@Header("Authorization: $Authorization")Authorization: String ): CreateQueryResponseBody
+    suspend fun create_query(@Body body: CreateQueryRequestBody, @Header("Authorization") Authorization: String ): CreateQueryResponseBody
 
     @GET("/get_queries")
     suspend fun get_queries(): GetQueriesResponseBody

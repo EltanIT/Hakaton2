@@ -59,7 +59,7 @@ class SubmitActivity : AppCompatActivity() {
             var token = token2
 
                 val ac = AccountsRepository()
-                 ac.CreateQuery(full_name, post, job_place, topic_work, title_work, annotation, file,token)
+                 ac.createQuery(full_name, post, job_place, topic_work, title_work, annotation, file,token)
 
             val intent = Intent(this@SubmitActivity, Submit_application_delete::class.java)
             startActivity(intent)
