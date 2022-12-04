@@ -35,18 +35,27 @@ class Registrate_activity : AppCompatActivity() {
         startActivity(intent)
     }
     fun load() {
-        lifecycleScope.launch {
-            val Username = email1.text.toString()
-            val Password = password1.text.toString()
-            val RePassword = rePassword.text.toString()
-            val ac = AccountsRepository()
+        val Username = email1.text.toString()
+        val Password = password1.text.toString()
+        val RePassword = rePassword.text.toString()
+        if (Password == RePassword && Password.length >= 6){
+            lifecycleScope.launch {
 
-            val response = ac.registrate(Username,Password)
+                val ac = AccountsRepository()
+                val response = ac.registrate(Username,Password)
 
 
 
+
+            }
+        }
+        else if(Password != RePassword){
 
         }
+        else if(Password.length < 6){
+
+        }
+
     }
     fun BackToRegistrate(view: View) {
         val intent = Intent(this@Registrate_activity, ExpertsActivityTrue::class.java)
