@@ -9,6 +9,7 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.lifecycle.lifecycleScope
 import capybara.racesdispute.hakaton.server.AccountsRepository
 import kotlinx.coroutines.launch
+import java.io.File
 
 lateinit var email : AppCompatEditText
 lateinit var password : AppCompatEditText
@@ -32,13 +33,8 @@ class EnterActivity : AppCompatActivity() {
             val Username = email.text.toString()
             val Password = password.text.toString()
 
-            try {
                 val ac = AccountsRepository()
                 val token = ac.login(Username, Password)
-                Log.d("token", token.toString())
-            }catch (e: java.lang.Exception){
-                Log.d("msgppp","ne robit")
-            }
 
 
         }
