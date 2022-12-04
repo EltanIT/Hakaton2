@@ -79,23 +79,11 @@
         android:textSize="16sp"
         android:inputType="textPassword"
         />
-    <TextView
-        android:id="@+id/necessarily"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/colort"
-        android:textSize="12sp"
-        android:paddingStart="36dp"
-        android:text="*-данные обязательны для заполения"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/RePassword"
 
-        />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Continue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
         android:layout_marginTop="60dp"
         android:text="Зарегистрироваться"
         android:textAllCaps="false"
@@ -103,7 +91,7 @@
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/necessarily"
+        app:layout_constraintTop_toBottomOf="@id/RePassword"
         android:background="@drawable/button_reception_dark"
         android:stateListAnimator="@null"
         android:onClick="Continue"

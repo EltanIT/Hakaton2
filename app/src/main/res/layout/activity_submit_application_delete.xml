@@ -51,19 +51,19 @@
         android:textSize="30sp"
         android:fontFamily="@font/semibold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2"
         app:layout_constraintVertical_bias="0.06"
-        app:layout_constraintHorizontal_bias="0.67"
+        android:layout_marginStart="40dp"
         />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/title_image"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
+        android:layout_width="320dp"
+        android:layout_height="160dp"
         android:src="@drawable/request_title_image"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,19 +72,52 @@
         />
 
     <TextView
+        android:id="@+id/opis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/discription"
         android:textSize="21sp"
         android:textColor="@color/colortext"
         android:fontFamily="@font/regular"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.50"
         app:layout_constraintHorizontal_bias="0.17"
         />
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opis"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        >
+
+
+        <TextView
+            android:id="@+id/textviewanim"
+            android:layout_width="320dp"
+            android:layout_height="70dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="25dp"
+            android:text="Прочитать больше"
+            android:textColor="@color/colorbuttonSecondary"
+            android:fontFamily="@font/regular"
+            android:onClick="read_more"
+            />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
