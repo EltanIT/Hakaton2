@@ -37,19 +37,10 @@ class Registrate_activity : AppCompatActivity() {
             val Username = email1.text.toString()
             val Password = password1.text.toString()
             val RePassword = rePassword.text.toString()
-            if (Password == RePassword){
-                val ac = AccountsRepository()
-                val token = ac.registrate(
-                    Username, Password)
-                Log.d("token", token.toString())
-                val intent = Intent(this@Registrate_activity,MainScreenActivity::class.java)
-                startActivity(intent)
-            }
-            else{
-                ProblemTxt.setTextColor(getColor(R.color.error))
-                ProblemTxt.setText("Введите все данные верно")
+            val ac = AccountsRepository()
+            val response = ac.getUser(Username)
 
-            }
+
 
         }
     }

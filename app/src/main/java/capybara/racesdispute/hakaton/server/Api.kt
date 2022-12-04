@@ -1,11 +1,6 @@
 package capybara.racesdispute.hakaton.server
 
 import capybara.racesdispute.hakaton.server.data_classes.queries.*
-import capybara.racesdispute.hakaton.server.data_classes.ratings.GetRatingsResponseBody
-import capybara.racesdispute.hakaton.server.data_classes.steps.GetDeadLinesResponseBody
-import capybara.racesdispute.hakaton.server.data_classes.steps.GetStatusResponseBody
-import capybara.racesdispute.hakaton.server.data_classes.steps.SetDeadLineResponseBody
-import capybara.racesdispute.hakaton.server.data_classes.steps.SetDeadlineRequestBody
 import capybara.racesdispute.hakaton.server.data_classes.users.*
 import retrofit2.http.Body
 import retrofit2.http.GET
