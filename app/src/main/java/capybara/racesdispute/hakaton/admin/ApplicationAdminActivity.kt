@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import capybara.racesdispute.hakaton.MainActivity
 import capybara.racesdispute.hakaton.experts.ExpertsActivityTrue
 import capybara.racesdispute.hakaton.R
 
@@ -13,7 +14,7 @@ class ApplicationAdminActivity : AppCompatActivity() {
         setContentView(R.layout.activity_application_admin)
     }
     fun go_to_MainActivity(view: View) {
-        val intent = Intent(this@ApplicationAdminActivity, ExpertsActivityTrue::class.java)
+        val intent = Intent(this@ApplicationAdminActivity, MainActivity::class.java)
         startActivity(intent)
     }
 

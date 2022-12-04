@@ -1,5 +1,6 @@
 package capybara.racesdispute.hakaton.server
 
+import capybara.racesdispute.hakaton.server.data_classes.postFile.PostFileRequestBody
 import capybara.racesdispute.hakaton.server.data_classes.queries.*
 import capybara.racesdispute.hakaton.server.data_classes.users.*
 import retrofit2.http.*
@@ -20,7 +21,7 @@ interface Api {
 
 
     @POST("/create_query")
-    suspend fun create_query(@Body body: CreateQueryRequestBody,@Header("Authorization: $Authorization")Authorization: String ): CreateQueryResponseBody
+    suspend fun create_query(@Body body: CreateQueryRequestBody,@Header("Authorization: $")Authorization: String ): CreateQueryResponseBody
 
     @GET("/get_queries")
     suspend fun get_queries(): GetQueriesResponseBody
@@ -36,6 +37,8 @@ interface Api {
     @POST("/set_score_by_id/")
     suspend fun  set_score_by_id(@Body body: SetScoreByIdRequestBody):SetScoreByIdResponseBody
 
+    @POST("/upload_file/")
+    suspend fun  upload_file(@Body body: PostFileRequestBody): PostFileRequestBody
 
 
 

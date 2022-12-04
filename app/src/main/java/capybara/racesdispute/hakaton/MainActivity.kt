@@ -4,13 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.LinearLayout
-import capybara.racesdispute.hakaton.admin.ApplicationAdminActivity
-
-import capybara.racesdispute.hakaton.experts.ExpertsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,10 +32,6 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this@MainActivity, Registrate_activity::class.java)
         startActivity(intent)
 
-    }
-
-    fun read_more(view: View) {
-        textviewanim.startAnimation(anim)
     }
 
 }

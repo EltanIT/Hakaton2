@@ -1,6 +1,7 @@
 package capybara.racesdispute.hakaton.server
 
 import android.util.Log
+import capybara.racesdispute.hakaton.server.data_classes.postFile.PostFileRequestBody
 import capybara.racesdispute.hakaton.server.data_classes.queries.CreateQueryRequestBody
 import capybara.racesdispute.hakaton.server.data_classes.queries.CreateQueryRequestHead
 import capybara.racesdispute.hakaton.server.data_classes.users.SignInRequestBody
@@ -10,6 +11,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import java.io.FileInputStream
 
 open class BaseRetrofitSource {
     suspend fun Login (username: String , password: String): String{
@@ -98,7 +100,6 @@ open class BaseRetrofitSource {
             title_work = title_work,
             annotation = annotation,
             file = file
-
         )
 
         val response = api.create_query(requestBody,Authorization)
@@ -125,5 +126,29 @@ open class BaseRetrofitSource {
 
         val api = retrofit.create(Api::class.java)
         val response = api.get_user(username)
+    }
+    suspend fun UploadFile(file: FileInputStream){
+        val loggingInterceptor = HttpLoggingInterceptor()
+            .setLevel(HttpLoggingInterceptor.Level.BODY)
+
+        val client = OkHttpClient.Builder()
+            .addInterceptor(loggingInterceptor)
+            .build()
+
+        val moshi = Moshi.Builder().build()
+
+        val  moshiConverterFactory = MoshiConverterFactory.create(moshi)
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl("http://176.28.64.201:3437/")
+            .client(client)
+            .addConverterFactory(moshiConverterFactory)
+            .build()
+
+        val api = retrofit.create(Api::class.java)
+
+        val requestBody = PostFileRequestBody(
+            file = file)
+        val response = api.upload_file(requestBody)
     }
 }

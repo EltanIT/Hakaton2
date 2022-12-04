@@ -1,14 +1,16 @@
 package capybara.racesdispute.hakaton
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.lifecycle.lifecycleScope
 import capybara.racesdispute.hakaton.experts.ExpertsActivityTrue
 import capybara.racesdispute.hakaton.server.AccountsRepository
-import capybara.racesdispute.hakaton.server.tokenCLass
 import kotlinx.coroutines.launch
 
 lateinit var email : AppCompatEditText
@@ -24,8 +26,10 @@ class EnterActivity : AppCompatActivity() {
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun Login(view: View) {
          var token = load()
+
         val intent = Intent(this@EnterActivity,MainScreenActivity::class.java)
         intent.putExtra("Authorization",token)
         startActivity(intent)
@@ -35,11 +39,9 @@ class EnterActivity : AppCompatActivity() {
         lifecycleScope.launch {
             val Username = email.text.toString()
             val Password = password.text.toString()
-
                 val ac = AccountsRepository()
                 val token = ac.login(Username, Password)
                 auth = "Bearer " + token
-
         }
         return  auth
     }
