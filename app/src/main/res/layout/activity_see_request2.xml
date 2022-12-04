@@ -285,21 +285,30 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             />
     </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.cardview.widget.CardView
         android:id="@+id/see_request_button"
         android:layout_width="175dp"
         android:layout_height="40dp"
-        android:text="Принять заявку"
-        android:textColor="@color/white"
-        android:background="@drawable/request_button_shape"
-        android:backgroundTint="@color/colorbuttonPrimary"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2"
-        app:layout_constraintVertical_bias="0.76"
-        android:onClick="see_request_button_clicked"
-        />
+        app:layout_constraintVertical_bias="0.73"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:text="Принять заявку"
+            android:textColor="@color/white"
+            android:background="@drawable/request_button_shape"
+            android:backgroundTint="@color/colorbuttonPrimary"
+
+            android:onClick="see_request_button_clicked"
+            />
+
+    </androidx.cardview.widget.CardView>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/delete_request_button"
         android:layout_width="175dp"

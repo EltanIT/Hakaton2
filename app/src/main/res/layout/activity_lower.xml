@@ -52,7 +52,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
-        android:paddingLeft="35dp"
         android:paddingTop="20dp"
         android:text="Актуальность и значимость темы"
         android:textColor="@color/colortext"
@@ -130,7 +129,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/OneRadioGroup"
         app:layout_constraintEnd_toEndOf="parent"
-        android:paddingLeft="35dp"
         android:paddingTop="20dp"
         android:gravity="center"
         android:text="Цельность замысла,преследующего прогрессивный характер последствий, публикации"
@@ -208,7 +206,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TwoRadioGroup"
         app:layout_constraintEnd_toEndOf="parent"
-        android:paddingLeft="35dp"
         android:paddingTop="20dp"
         android:gravity="center"
         android:text="Аргументированность и глубина раскрытия темы"
@@ -285,8 +282,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/FourRadioGroup"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:paddingLeft="35dp"
         android:paddingTop="20dp"
         android:gravity="center"
         android:text="Резонансность материала"
@@ -364,7 +359,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/FiveRadioGroup"
         app:layout_constraintEnd_toEndOf="parent"
-        android:paddingLeft="35dp"
         android:paddingTop="20dp"
         android:gravity="center"
         android:text="Точность и доходчивость языка и стиля изложения,
@@ -438,21 +432,31 @@
             android:layout_height="wrap_content"
             />
     </RadioGroup>
-    <androidx.appcompat.widget.AppCompatButton
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/save_request_button"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:text="Сохранить"
-        android:textColor="@color/white"
-        android:background="@drawable/request_button_shape"
-        android:backgroundTint="@color/colorbuttonPrimary"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/SixRadioGroup"
         app:layout_constraintVertical_bias="0.76"
-        android:onClick="save_request_button_clicked"
-        />
+        android:layout_marginTop="20dp"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="Сохранить"
+            android:textColor="@color/white"
+            android:background="@drawable/request_button_shape"
+            android:backgroundTint="@color/colorbuttonPrimary"
+            android:onClick="save_request_button_clicked"
+            />
+
+    </androidx.cardview.widget.CardView>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cancel_button"
         android:layout_width="150dp"
