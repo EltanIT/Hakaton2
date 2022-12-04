@@ -19,12 +19,14 @@ lateinit var  ProblemTxt : TextView
 
 class Registrate_activity : AppCompatActivity() {
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrate)
         email1 = findViewById(R.id.email)
         password1 = findViewById(R.id.Password)
         rePassword = findViewById(R.id.RePassword)
+
     }
 
     fun Continue(view: View) {
@@ -37,8 +39,11 @@ class Registrate_activity : AppCompatActivity() {
             val Password = password1.text.toString()
             val RePassword = rePassword.text.toString()
             val ac = AccountsRepository()
-            val response = ac.getUser(Username)
 
+            val response = ac.registrate(Username,Password)
+
+            val intent = Intent(this@Registrate_activity,EnterActivity::class.java)
+            startActivity(intent)
 
 
         }

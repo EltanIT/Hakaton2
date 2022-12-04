@@ -1,5 +1,6 @@
 package capybara.racesdispute.hakaton.server
 
+import android.util.Log
 import capybara.racesdispute.hakaton.server.data_classes.queries.CreateQueryRequestBody
 import capybara.racesdispute.hakaton.server.data_classes.queries.CreateQueryRequestHead
 import capybara.racesdispute.hakaton.server.data_classes.users.SignInRequestBody
@@ -21,7 +22,6 @@ open class BaseRetrofitSource {
 
         val moshi = Moshi.Builder().build()
 
-
         val  moshiConverterFactory = MoshiConverterFactory.create(moshi)
 
         val retrofit = Retrofit.Builder()
@@ -38,6 +38,7 @@ open class BaseRetrofitSource {
         )
 
         val response = api.signIn(requestBody)
+        Log.i("token",response.token)
 
     }
     suspend fun Registrate ( username: String , password: String){
