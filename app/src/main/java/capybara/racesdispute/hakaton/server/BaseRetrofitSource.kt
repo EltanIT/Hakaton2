@@ -38,7 +38,7 @@ open class BaseRetrofitSource {
         )
 
         val response = api.signIn(requestBody)
-        Log.i("token",response.token)
+
 
     }
     suspend fun Registrate ( username: String , password: String){

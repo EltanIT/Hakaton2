@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun Registrate(view: View) {
-        val intent = Intent(this@MainActivity,ExpertsActivity::class.java)
+        val intent = Intent(this@MainActivity,Registrate_activity::class.java)
         startActivity(intent)
     }
 
