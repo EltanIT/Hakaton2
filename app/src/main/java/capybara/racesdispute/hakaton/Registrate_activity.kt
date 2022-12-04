@@ -45,6 +45,7 @@ class Registrate_activity : AppCompatActivity() {
 
 
 
+
         }
     }
     fun BackToRegistrate(view: View) {

@@ -12,7 +12,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 open class BaseRetrofitSource {
-    suspend fun Login (username: String , password: String){
+    suspend fun Login (username: String , password: String): String{
         val loggingInterceptor = HttpLoggingInterceptor()
             .setLevel(HttpLoggingInterceptor.Level.BODY)
 
@@ -38,7 +38,7 @@ open class BaseRetrofitSource {
         )
 
         val response = api.signIn(requestBody)
-
+        return  response.acces_token
 
     }
     suspend fun Registrate ( username: String , password: String){
