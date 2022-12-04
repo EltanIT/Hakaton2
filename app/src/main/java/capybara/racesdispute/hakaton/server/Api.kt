@@ -1,11 +1,6 @@
 package capybara.racesdispute.hakaton.server
 
 import capybara.racesdispute.hakaton.server.data_classes.queries.*
-import capybara.racesdispute.hakaton.server.data_classes.ratings.GetRatingsResponseBody
-import capybara.racesdispute.hakaton.server.data_classes.steps.GetDeadLinesResponseBody
-import capybara.racesdispute.hakaton.server.data_classes.steps.GetStatusResponseBody
-import capybara.racesdispute.hakaton.server.data_classes.steps.SetDeadLineResponseBody
-import capybara.racesdispute.hakaton.server.data_classes.steps.SetDeadlineRequestBody
 import capybara.racesdispute.hakaton.server.data_classes.users.*
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -26,15 +21,6 @@ interface Api {
 
 
 
-    @GET("/get_status")
-    suspend fun get_status(): GetStatusResponseBody
-
-    @POST("/set_deadlines")
-    suspend fun set_deadLine(@Body body: SetDeadlineRequestBody): SetDeadLineResponseBody
-
-    @GET("/get_deadlines")
-    suspend fun get_deadlines(): GetDeadLinesResponseBody
-
 
 
     @POST("/create_query")
@@ -54,8 +40,6 @@ interface Api {
     @POST("/set_score_by_id/")
     suspend fun  set_score_by_id(@Body body: SetScoreByIdRequestBody):SetScoreByIdResponseBody
 
-    @GET("/get_ratings")
-    suspend fun get_ratings():GetRatingsResponseBody
 
 
 
