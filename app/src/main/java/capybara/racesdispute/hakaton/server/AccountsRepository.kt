@@ -24,16 +24,18 @@ class AccountsRepository: BaseRetrofitSource() {
         val baseRetrofitSource  = BaseRetrofitSource()
         baseRetrofitSource.GetUser(username)
     }
-    suspend fun request(
+    suspend fun createQuery(
         full_name: String,
         post: String,
         job_place: String,
         topic_work: String,
         title_work: String,
         anotation: String,
-        file: String
-    ){
+        file: String,
+        token: String
+        ) {
         val baseRetrofitSource  = BaseRetrofitSource()
-        baseRetrofitSource.CreateQuery(full_name, post, job_place, topic_work, title_work, anotation, file)
+        baseRetrofitSource.CreateQuery(full_name, post, job_place, topic_work, title_work, anotation, file,token)
     }
+
 }

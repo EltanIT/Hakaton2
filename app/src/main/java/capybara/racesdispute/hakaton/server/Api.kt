@@ -2,12 +2,7 @@ package capybara.racesdispute.hakaton.server
 
 import capybara.racesdispute.hakaton.server.data_classes.queries.*
 import capybara.racesdispute.hakaton.server.data_classes.users.*
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
-import retrofit2.http.Header
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface Api {
 
@@ -25,7 +20,7 @@ interface Api {
 
 
     @POST("/create_query")
-    suspend fun create_query(@Body body: CreateQueryRequestBody): CreateQueryResponseBody
+    suspend fun create_query(@Body body: CreateQueryRequestBody,@Header("Authorization: $Authorization")Authorization: String ): CreateQueryResponseBody
 
     @GET("/get_queries")
     suspend fun get_queries(): GetQueriesResponseBody

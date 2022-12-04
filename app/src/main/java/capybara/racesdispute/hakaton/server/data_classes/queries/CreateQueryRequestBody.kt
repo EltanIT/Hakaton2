@@ -1,5 +1,7 @@
 package capybara.racesdispute.hakaton.server.data_classes.queries
 
+
+
 data class CreateQueryRequestBody(
     val full_name : String,
     val post: String,

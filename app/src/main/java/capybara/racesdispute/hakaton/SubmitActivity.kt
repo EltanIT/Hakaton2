@@ -11,7 +11,7 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.lifecycle.lifecycleScope
 import capybara.racesdispute.hakaton.server.AccountsRepository
 import kotlinx.coroutines.launch
-
+var token2 : String = ""
 class SubmitActivity : AppCompatActivity() {
 
     private lateinit var full_name: AppCompatEditText
@@ -35,6 +35,10 @@ class SubmitActivity : AppCompatActivity() {
         annotation = findViewById(R.id.annotation)
         radio1 = findViewById(R.id.radio1)
         radio2 = findViewById(R.id.radio2)
+
+        var token = intent.getStringExtra("Authorization")
+        token2 = token!!
+
     }
 
     fun BackToRegistrate(view: View) {
@@ -52,13 +56,11 @@ class SubmitActivity : AppCompatActivity() {
             val title_work = title_work.text.toString()
             val annotation = annotation.text.toString()
             val file = file
-            try {
+            var token = token2
+
                 val ac = AccountsRepository()
-                val token = ac.request(full_name, post, job_place, topic_work, title_work, annotation, file)
-                Log.d("token", token.toString())
-            } catch (e: java.lang.Exception) {
-                Log.d("msgppp", "ne robit")
-            }
+                 ac.CreateQuery(full_name, post, job_place, topic_work, title_work, annotation, file,token)
+
             val intent = Intent(this@SubmitActivity, Submit_application_delete::class.java)
             startActivity(intent)
         }
