@@ -35,7 +35,7 @@ class EnterActivity : AppCompatActivity() {
 
                 val ac = AccountsRepository()
                 val token = ac.login(Username, Password)
-
+                Log.i("token",token)
 
         }
     }
