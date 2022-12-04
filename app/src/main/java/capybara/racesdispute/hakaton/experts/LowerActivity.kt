@@ -1,10 +1,10 @@
-package capybara.racesdispute.hakaton
+package capybara.racesdispute.hakaton.experts
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import capybara.racesdispute.hakaton.experts.ExpertsActivity
+import capybara.racesdispute.hakaton.R
 
 class LowerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +14,7 @@ class LowerActivity : AppCompatActivity() {
     }
 
     fun save_request_button_clicked(view: View) {
-        val intent = Intent(this@LowerActivity,PrintedEdition::class.java)
+        val intent = Intent(this@LowerActivity, PrintedEdition::class.java)
         startActivity(intent)
     }
 

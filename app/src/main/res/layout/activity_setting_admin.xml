@@ -38,7 +38,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/toolbar_down"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,12 +53,16 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                >
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    >
                     <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/setting_image"
                         android:layout_width="40dp"
@@ -66,39 +70,47 @@
                         android:src="@drawable/application_image"
                         android:background="@color/white"
                         android:scaleType="fitXY"
-                        android:layout_marginStart="70dp"
                         android:layout_marginTop="5dp"
+                        android:layout_marginStart="7dp"
+                        android:onClick="go_to_request_button"
                         />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Заявки"
+                        android:fontFamily="@font/semibold"
                         android:layout_marginTop="47dp"
-                        android:layout_marginStart="68dp"
+                        android:layout_marginStart="3dp"
                         />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:onClick="go_to_setting_admin"
                     >
+
                     <androidx.appcompat.widget.AppCompatImageButton
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_marginEnd="10dp"
                         android:layout_marginStart="270dp"
                         android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
                         android:background="@drawable/round_shape"
                         android:scaleType="fitXY"
-                        android:src="@drawable/setting_image" />
+                        android:src="@drawable/setting_image"
+                        android:onClick="go_to_setting_admin"
+                        />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Настройки"
                         android:layout_marginTop="47dp"
                         android:layout_marginStart="255dp"
-                        android:fontFamily="@font/semibold"
+                        android:fontFamily="@font/medium"
                         />
                 </RelativeLayout>
 
@@ -314,31 +326,6 @@
     </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cancel_button"
-        android:paddingTop="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.55"
-        app:layout_constraintHorizontal_bias="0.14">
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/exit_profil"
-            android:scaleType="fitXY"
-            android:background="@color/white"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Выход из аккаунта"
-            android:textColor="@color/colorbuttonSecondary"
-            android:layout_marginStart="6dp"
-            />
-    </LinearLayout>
 
 
     <androidx.cardview.widget.CardView

@@ -14,5 +14,11 @@ class Setting_admin : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting_admin)
+
+    }
+
+    fun go_to_request_button(view: View) {
+        val intent = Intent(this@Setting_admin,See_request::class.java)
+        startActivity(intent)
     }
 }
