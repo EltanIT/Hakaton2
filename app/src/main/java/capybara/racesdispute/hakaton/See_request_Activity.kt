@@ -18,7 +18,7 @@ class See_request_Activity : AppCompatActivity() {
     }
 
     fun BackToSubmitApplicationDelete_Button(view: View) {
-        val intent = Intent(this@See_request_Activity,SubmitActivity::class.java)
+        val intent = Intent(this@See_request_Activity,Submit_application_delete::class.java)
         startActivity(intent)
     }
 

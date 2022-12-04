@@ -45,7 +45,6 @@ class SubmitActivity : AppCompatActivity() {
     fun Continue(view: View) {
 
         lifecycleScope.launch {
-            val email = email.text.toString()
             val full_name = full_name.text.toString()
             val post = post.text.toString()
             val job_place = job_place.text.toString()
@@ -55,7 +54,7 @@ class SubmitActivity : AppCompatActivity() {
             val file = file
             try {
                 val ac = AccountsRepository()
-                val token = ac.request(email, full_name, post, job_place, topic_work, title_work, annotation, file)
+                val token = ac.request(full_name, post, job_place, topic_work, title_work, annotation, file)
                 Log.d("token", token.toString())
             } catch (e: java.lang.Exception) {
                 Log.d("msgppp", "ne robit")

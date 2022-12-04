@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".LowerActivity">
     <androidx.cardview.widget.CardView
-        android:id="@+id/toolbar_up"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,6 +22,16 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="14dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center|left"
+                    android:background="@color/white"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/exit_button"
+                    android:onClick="Back"
+                    />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:layout_width="50dp"
@@ -40,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_up"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         android:paddingLeft="35dp"
         android:paddingTop="20dp"
@@ -279,7 +289,7 @@
         android:paddingLeft="35dp"
         android:paddingTop="20dp"
         android:gravity="center"
-        android:text="Цельность замысла,преследующего прогрессивный характер последствий, публикации"
+        android:text="Резонансность материала"
         android:textColor="@color/colortext"
         android:textAllCaps="false"
         android:textSize="14sp"
@@ -357,12 +367,16 @@
         android:paddingLeft="35dp"
         android:paddingTop="20dp"
         android:gravity="center"
-        android:text="Цельность замысла,преследующего прогрессивный характер последствий, публикации"
+        android:text="Точность и доходчивость языка и стиля изложения,
+своеобразие методов
+журналистского творчества"
         android:textColor="@color/colortext"
         android:textAllCaps="false"
         android:textSize="14sp"
         android:fontFamily="@font/semibold"
+        android:onClick="cancel_button_clicked"
         />
+
     <RadioGroup
         android:id="@+id/SixRadioGroup"
         android:layout_width="wrap_content"
