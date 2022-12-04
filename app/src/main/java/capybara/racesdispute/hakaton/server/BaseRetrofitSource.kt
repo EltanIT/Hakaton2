@@ -41,7 +41,7 @@ open class BaseRetrofitSource {
         return  response.access_token
 
     }
-    suspend fun Registrate ( username: String , password: String){
+    suspend fun Registrate ( username: String , password: String): String{
         val loggingInterceptor = HttpLoggingInterceptor()
             .setLevel(HttpLoggingInterceptor.Level.BODY)
 
@@ -67,8 +67,10 @@ open class BaseRetrofitSource {
         )
 
         val response = api.signUp(requestBody)
+        return  response.access_token
+
     }
-    suspend fun CreateQuery(full_name: String, post: String, job_place: String, topic_work: String, title_work: String, annotation: String, file: String){
+    suspend fun CreateQuery(full_name: String, post: String, job_place: String, topic_work: String, title_work: String, annotation: String, file: String,Authorization: String) : String{
         val loggingInterceptor = HttpLoggingInterceptor()
             .setLevel(HttpLoggingInterceptor.Level.BODY)
 
@@ -96,9 +98,11 @@ open class BaseRetrofitSource {
             title_work = title_work,
             annotation = annotation,
             file = file
+
         )
 
-        val response = api.create_query(requestBody)
+        val response = api.create_query(requestBody,Authorization)
+        return response.result
 
     }
     suspend fun GetUser (username : String){
