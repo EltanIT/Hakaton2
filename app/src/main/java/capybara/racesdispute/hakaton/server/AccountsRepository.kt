@@ -21,7 +21,6 @@ class AccountsRepository: BaseRetrofitSource() {
     }
 
     suspend fun request(
-        email: String,
         full_name: String,
         post: String,
         job_place: String,
@@ -31,6 +30,6 @@ class AccountsRepository: BaseRetrofitSource() {
         file: String
     ){
         val baseRetrofitSource  = BaseRetrofitSource()
-        baseRetrofitSource.CreateQuery(email,full_name, post, job_place, topic_work, title_work, anotation, file)
+        baseRetrofitSource.CreateQuery(full_name, post, job_place, topic_work, title_work, anotation, file)
     }
 }

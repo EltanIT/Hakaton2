@@ -67,7 +67,7 @@ open class BaseRetrofitSource {
 
         val response = api.signUp(requestBody)
     }
-    suspend fun CreateQuery(email:String,full_name: String, post: String, job_place: String, topic_work: String, title_work: String, annotation: String, file: String){
+    suspend fun CreateQuery(full_name: String, post: String, job_place: String, topic_work: String, title_work: String, annotation: String, file: String){
         val loggingInterceptor = HttpLoggingInterceptor()
             .setLevel(HttpLoggingInterceptor.Level.BODY)
 
@@ -87,9 +87,6 @@ open class BaseRetrofitSource {
 
         val api = retrofit.create(Api::class.java)
 
-        val requestHead = CreateQueryRequestHead(
-            email = email
-        )
         val requestBody = CreateQueryRequestBody(
             full_name = full_name,
             post = post,
@@ -100,7 +97,7 @@ open class BaseRetrofitSource {
             file = file
         )
 
-        val response = api.create_query(requestBody, requestHead)
+        val response = api.create_query(requestBody)
 
     }
 }

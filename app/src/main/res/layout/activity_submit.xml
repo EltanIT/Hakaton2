@@ -24,7 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:paddingLeft="25dp"
-        android:paddingTop="90dp"
+        android:paddingTop="60dp"
         android:text="Оставить заявку"
         android:textColor="@color/colortext"
         android:textAllCaps="false"
@@ -123,52 +123,79 @@
         android:textSize="14sp"
         android:inputType="textPassword"
         />
-        >
-        <RadioButton
-            android:id="@+id/radio1"
-            android:layout_width="26dp"
-            android:layout_height="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/annotation"
-            android:paddingLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="22dp"
-            android:onClick="radio1_clicked"
-            android:fontFamily="@font/regular"
-            />
-        <TextView
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Укажите формат вашей работы*"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/annotation"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearRadio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/annotation"
+        app:layout_constraintVertical_bias="0.2">
+
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingVertical="5dp">
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:fontFamily="@font/regular"
+                android:onClick="radio1_clicked" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="26dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular"
+                android:onClick="radio2_clicked"
+
+                />
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linearRadio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/linearRadio1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/annotation"
+        app:layout_constraintVertical_bias="0.23"
+        app:layout_constraintHorizontal_bias="0"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
             android:text="Печатные издания"
             android:layout_marginStart="20dp"
-            app:layout_constraintStart_toEndOf="@id/radio1"
-            app:layout_constraintTop_toBottomOf="@id/annotation"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="140dp"
 
-            />
-
-        <RadioButton
-            android:id="@+id/radio2"
-            android:layout_width="26dp"
-            android:layout_height="20dp"
-            android:fontFamily="@font/regular"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="15dp"
-            app:layout_constraintTop_toBottomOf="@id/radio1"
-            android:onClick="radio2_clicked"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Телевизионные(видео) материалы"
             android:layout_marginStart="20dp"
-            app:layout_constraintStart_toEndOf="@id/radio2"
-            app:layout_constraintTop_toBottomOf="@id/annotation"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="70dp"
             />
+    </LinearLayout>
+
 
 
     <TextView
@@ -181,7 +208,7 @@
         android:paddingStart="36dp"
         android:text="*-данные обязательны для заполения"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radio2"
+        app:layout_constraintTop_toBottomOf="@id/linearRadio2"
 
         />
     <androidx.appcompat.widget.AppCompatButton

@@ -16,6 +16,20 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Lower2Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ExpertsActivityTrue"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RatingActivity"
             android:exported="false">
             <meta-data
@@ -86,7 +100,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ExpertsActivity"
+            android:name=".experts.ExpertsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

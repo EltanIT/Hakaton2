@@ -1,6 +1,5 @@
 package capybara.racesdispute.hakaton.server
 
-import capybara.racesdispute.hakaton.server.data_classes.*
 import capybara.racesdispute.hakaton.server.data_classes.queries.*
 import capybara.racesdispute.hakaton.server.data_classes.ratings.GetRatingsResponseBody
 import capybara.racesdispute.hakaton.server.data_classes.steps.GetDeadLinesResponseBody
@@ -10,12 +9,9 @@ import capybara.racesdispute.hakaton.server.data_classes.steps.SetDeadlineReques
 import capybara.racesdispute.hakaton.server.data_classes.users.*
 import retrofit2.http.Body
 import retrofit2.http.GET
-import retrofit2.http.HEAD
-import retrofit2.http.HeaderMap
-import retrofit2.http.Headers
 import retrofit2.http.POST
 import retrofit2.http.Path
-import retrofit2.http.Header as Header
+import retrofit2.http.Header
 
 interface Api {
 
@@ -42,7 +38,7 @@ interface Api {
 
 
     @POST("/create_query")
-    suspend fun create_query(@Body body: CreateQueryRequestBody, @HeaderMap head: CreateQueryRequestHead): CreateQueryResponseBody
+    suspend fun create_query(@Body body: CreateQueryRequestBody): CreateQueryResponseBody
 
     @GET("/get_queries")
     suspend fun get_queries(): GetQueriesResponseBody
@@ -64,3 +60,4 @@ interface Api {
 
 
 }
+
