@@ -3,13 +3,12 @@ package capybara.racesdispute.hakaton
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.lifecycle.lifecycleScope
+import capybara.racesdispute.hakaton.experts.ExpertsActivityTrue
 import capybara.racesdispute.hakaton.server.AccountsRepository
 import kotlinx.coroutines.launch
-import java.io.File
 
 lateinit var email : AppCompatEditText
 lateinit var password : AppCompatEditText
@@ -41,7 +40,7 @@ class EnterActivity : AppCompatActivity() {
     }
 
     fun BackToRegistrate(view: View) {
-        val intent = Intent(this@EnterActivity,MainActivity::class.java)
+        val intent = Intent(this@EnterActivity, ExpertsActivityTrue::class.java)
         startActivity(intent)
     }
 }
