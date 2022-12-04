@@ -100,4 +100,25 @@ open class BaseRetrofitSource {
         val response = api.create_query(requestBody)
 
     }
+    suspend fun GetUser (username : String){
+        val loggingInterceptor = HttpLoggingInterceptor()
+            .setLevel(HttpLoggingInterceptor.Level.BODY)
+
+        val client = OkHttpClient.Builder()
+            .addInterceptor(loggingInterceptor)
+            .build()
+
+        val moshi = Moshi.Builder().build()
+
+        val  moshiConverterFactory = MoshiConverterFactory.create(moshi)
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl("http://176.28.64.201:3437/")
+            .client(client)
+            .addConverterFactory(moshiConverterFactory)
+            .build()
+
+        val api = retrofit.create(Api::class.java)
+        val response = api.get_user(username)
+    }
 }

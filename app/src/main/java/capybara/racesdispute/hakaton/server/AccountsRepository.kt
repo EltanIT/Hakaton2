@@ -19,7 +19,11 @@ class AccountsRepository: BaseRetrofitSource() {
         val baseRetrofitSource  = BaseRetrofitSource()
         baseRetrofitSource.Registrate(username,password)
     }
-
+    suspend fun getUser(
+        username: String) {
+        val baseRetrofitSource  = BaseRetrofitSource()
+        baseRetrofitSource.GetUser(username)
+    }
     suspend fun request(
         full_name: String,
         post: String,
